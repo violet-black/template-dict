@@ -23,7 +23,7 @@ imagesize==1.4.1
 jinja2==3.1.3
     # via sphinx
 m2r2==0.3.3.post2
-    # via jsonschema-gen (setup.cfg)
+    # via template-dict (setup.cfg)
 markupsafe==2.1.5
     # via jinja2
 mistune==0.8.4
@@ -33,13 +33,13 @@ packaging==24.0
 pygments==2.17.2
     # via sphinx
 python-docs-theme==2024.3
-    # via jsonschema-gen (setup.cfg)
+    # via template-dict (setup.cfg)
 requests==2.31.0
     # via sphinx
 snowballstemmer==2.2.0
     # via sphinx
 sphinx==7.2.6
-    # via jsonschema-gen (setup.cfg)
+    # via template-dict (setup.cfg)
 sphinxcontrib-applehelp==1.0.8
     # via sphinx
 sphinxcontrib-devhelp==1.0.6
