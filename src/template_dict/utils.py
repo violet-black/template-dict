@@ -1,9 +1,11 @@
+"""Dictionary utility functions."""
+
 from typing import Any, List, Union
 
-__all__ = ['get_field']
+__all__ = ["get_field"]
 
 
-def get_field(__obj, __key: Union[str, List[str]], *, default: Union[Exception, Any] = KeyError, delimiter: str = '.'):
+def get_field(__obj, __key: Union[str, List[str]], *, default: Union[Exception, Any] = KeyError, delimiter: str = "."):
     """Get a field from a nested dict using a flattened key.
 
     >>> get_field({'a': {'b': [1], 'c': 2}}, 'a.b')

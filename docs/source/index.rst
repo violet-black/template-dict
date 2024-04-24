@@ -1,5 +1,5 @@
-Jsonschema-gen
---------------
+Template-dict
+-------------
 
 .. toctree::
    :maxdepth: 1

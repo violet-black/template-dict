@@ -1,3 +1,5 @@
+"""Templates classes and operators."""
+
 from abc import ABC, abstractmethod
 from ast import literal_eval
 from contextlib import suppress
@@ -52,7 +54,6 @@ class Operator(ABC):
         :param data: dynamic data
         :returns: evaluated operator value
         """
-        ...
 
     def _eval_args(self, data: Mapping[str, Any], /):
         for arg in self.args:
@@ -291,7 +292,7 @@ class Template:
         if not s:
             return s
 
-        bl, br = self.definitions.operator_brackets
+        bl, br = self.definitions.operator_brackets[0], self.definitions.operator_brackets[1]
         bls, blr = s[0] == bl, s[-1] == br
 
         if not bls and not blr:
@@ -330,6 +331,6 @@ class Template:
             op = self.definitions.default_operator
 
         op_obj = self.operators[op](self, tuple(args))
-        if type(op_obj) is OperatorSelect:
+        if isinstance(op_obj, OperatorSelect):
             keys.extend(arg for arg in args if type(arg) is str)
         return op_obj
